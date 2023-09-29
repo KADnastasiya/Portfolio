@@ -63,7 +63,6 @@ main.container{
 .h1_subtitle{
     color: var(--Solid-Heading, #42446E);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: Poppins;
     font-size: 58px;
     font-style: normal;
     font-weight: 700;
@@ -71,7 +70,7 @@ main.container{
     letter-spacing: -1px;
 }
 
-.h1_name{
+.h1_name, .section_5_mail_adress{
     background: var(--Gradient-Heading, linear-gradient(90deg, #13B0F5 -2.06%, #E70FAA 100%));
     background-clip: text;
     -webkit-background-clip: text;
@@ -83,21 +82,18 @@ main.container{
 }
 
 
-.section_2_title{
+.section_2_title, .section_3_title{
     color: #42446E;
-    font-family: Poppins;
     font-size: 42px;
     font-style: normal;
     font-weight: 700;
     line-height: 52px; 
     letter-spacing: -0.4px;
-    margin: 0;
     padding-top: 38px;
 }
 
-.section_2_description{
+.section_2_description, .section_3_description{
     color: var(--dark-content, #666);
-    font-family: Poppins;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -115,7 +111,6 @@ main.container{
 
 .section_2_subtitle{
     color: var(--dark-content, #666);
-    font-family: Poppins;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -130,7 +125,6 @@ main.container{
 
 .section_2_text{
     color: var(--light-Content, #A7A7A7);
-    font-family: Poppins;
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
@@ -212,10 +206,142 @@ section nav ul li a{
     text-decoration: none;
 }
 
+.section_3_tech{
+    margin-bottom: 198px;
+}
+
+.section_3_skills{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+
+.section_4_projects{
+    margin: 160px 0 111px;
+}
+
+.section_4_title{
+    color: var(--Solid-Heading, #42446E);
+
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px; 
+    width: 176px;
+    margin: 0, 0, 32px;
+}
+
+.section_4_description{
+    color: var(--dark-content, #666);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; 
+    width: 214px;
+    margin: 0;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 34px;
+}
+
+.project_card{
+    width: 375px;
+    height: 567px;
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: 2px 2px 100px 0px rgba(0, 0, 0, 0.20);  
+}
+
+
+.project_card_title{
+    color: #000;
+    text-align: center;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px;
+}
+
+.project_card_title h4{
+    margin: 27px 0 17px;
+}
+
+.project_card_text{
+    color: var(--dark-content, #666);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 26px; 
+    width: 314px;
+    margin: 0 auto;
+}
+
+.project_card_text p{
+    margin: 0;
+}
+
+.project_card_stack{
+    color: var(--Solid-Heading, #42446E);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; 
+    width: 314px;
+    margin: 0 auto;
+}
+
+.project_card_stack p{
+    margin: 12px 0 15px;
+}
+
+.project_card_stack_span{  
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.project_card_links{
+    display: flex;
+    align-items: center;
+    width: 310px;
+    margin: 0 auto;
+    gap: 48px;
+}
+
+.project_card_links_img{
+    margin-right: 10px;
+}
+
+.project_card_links_text{
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; 
+    text-decoration-line: underline;
+    width: 96px;
+}
+
+.section_5_mail{
+    width: 890px;
+    margin: 200px auto 400px;
+}
+
+.section_5_title{
+    color: var(--colors-heading, #1E0E62);
+    text-align: center;
+    font-family: DM Sans;
+    font-size: 58px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px; 
+    letter-spacing: -1px;
+}
+
 .footer_text{
     color: var(--dark-content, #666);
     text-align: center;
-    font-family: Poppins;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -239,3 +365,444 @@ footer::after {
     opacity: 0.3;
     margin: 42px 0;
 }
+
+
+@media (max-width: 1200px){
+    .container{
+        width: 1000px;
+    }
+
+    main.container {
+        margin-top: 170px;
+    }
+
+    .section_1_left_block {
+        width: 590px;
+    }
+
+    .h1_subtitle {
+        font-size: 55px;
+    }
+
+    .section_2 {
+        margin-top: 115px;
+    }
+
+    .section_3_tech {
+        margin-bottom: 150px;
+    }
+
+    .section_3_skills {
+        gap: 65px;
+    }
+
+    .section_4_projects {
+        margin: 140px 0 100px;
+    }
+
+    .cards {
+        justify-content: space-around;
+        gap: 25px;
+    }
+
+    .section_5_mail {
+        margin: 150px auto 200px;
+    }
+
+    .footer_contacts_tel {
+        margin: 0 63px 0 270px;
+    }
+
+    footer::after {
+        width: 1000px;
+    }
+
+    section nav ul {
+        gap: 50px;
+    }
+
+    
+    .footer_text {
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 992px){
+    .container{
+        width: 780px;
+    }
+
+    .header_nav{
+        padding: 0;
+    }
+
+    header nav ul {
+        gap: 30px;
+    }
+
+
+    .header_links, .footer_links {
+        gap: 15px;
+    }
+
+    main.container {
+        margin-top: 110px;
+    }
+
+    .section_1_left_block {
+        width: 390px;
+    }
+
+    .h1_subtitle {
+        font-size: 50px;
+        line-height: 60px;
+    }
+
+    .section_2 {
+        margin-top: 90px;
+    }
+
+    .section_3_tech {
+        margin-bottom: 120px;
+    }   
+
+    .section_3_skills {
+        gap: 21px;
+    }
+
+    .section_4_projects {
+        margin: 100px 0 85px;
+    }
+
+    .cards {
+        gap: 30px;
+    }
+
+    .section_5_mail {
+        width: 780px;
+    }
+
+    .footer_contacts_tel {
+        margin: 0 63px 0 130px;
+    }
+
+    footer::after {
+        width: 780px;
+    }
+
+    section nav ul {
+        gap: 20px;
+    }
+
+    .footer_text {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px){
+    .container{
+        width: 650px;
+    }
+
+    header nav ul {
+        gap: 15px;
+    }
+
+    header nav ul li a {
+        font-size: 16px;
+    }
+
+    main.container {
+        margin-top: 90px;
+        }
+
+    .section_1 {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .section_1_left_block {
+        margin: 0 auto; 
+    }
+
+    .section_2_title, .section_3_title, .section_4_title {
+        font-size: 40px;
+        line-height: 50px;
+        letter-spacing: -0.4px;
+    }
+
+    .section_2_description, .section_3_description {
+        font-size: 14px;
+        line-height: 20px;
+        width: 650px;
+        margin-top: 5px;
+        padding-top: 55px;
+    }
+
+    .section_2_text {
+        font-size: 8px;
+        line-height: 10px;
+    }
+
+    .section_2_text_place1 {
+        margin-right: 74px;
+    }
+
+    .section_2_places::after {
+        width: 650px;
+    }
+
+    .section_2_text_place2 {
+        margin-right: 98px;
+    }
+
+    .section_2_text_place3 {
+        margin-right: 183px;
+    }
+
+    .section_2_text_place {
+        margin-right: 335px;
+    }
+
+    .section_3_tech {
+        margin-bottom: 90px;
+    }
+
+    .section_3_description {
+        padding-top: 5px;
+    }
+
+    .section_3_skills {
+        gap: 50px;
+        width: 650px;
+        justify-content: space-around;
+    }
+
+    .section_5_mail {
+        width: 650px;
+    }
+
+    .section_5_title {
+        font-size: 48px;
+        line-height: 65px;
+    }
+
+    .footer_contacts_tel {
+        margin: 0 20px 0 20px;
+    }
+
+    footer::after {
+        width: 650px;
+    }
+
+    section nav ul li a {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    section nav ul {
+        gap: 10px;
+    }
+
+    .footer_text {
+        font-size: 11px;
+    }
+
+}
+
+
+@media (max-width: 480px){
+    .container{
+        width: 320px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .header_links {
+        gap: 8px;
+    }
+
+    main.container {
+        margin-top: 60px;
+    }
+
+
+    .section_1_left_block {
+        width: 320px;
+    }
+
+    .h1_subtitle {
+        font-size: 32px;
+        line-height: 42px;
+    }
+
+    .main_photo img{
+        width: 320px;
+        height: 320px;
+    }
+
+    .section_2 {
+        margin-top: 70px;
+    }
+
+    .section_2_title, .section_3_title {
+        text-align: center;
+    }
+
+    .section_2_description, .section_3_description {
+        font-size: 14px;
+        line-height: 20px;
+        width: 320px;
+        padding-top: 10px;
+        text-align: center;
+    }
+
+    .section_2_title{
+        padding-top: 35px;
+        margin: 5px 0 10px;
+    }
+
+    .section_2_places {
+        padding-top: 15px;
+    }
+
+    .section_2_subtitle {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 3px;
+        text-align: center;
+    }
+
+    .section_2_text_place1, .section_2_text_location {
+        margin-right: 15px;
+    }
+
+
+    .section_2_places::after {
+        width: 320px;
+    }
+
+    .section_2_text_place2 {
+        margin-right: 30px;
+    }
+
+    .section_2_text_place3 {
+        margin-right: 77px;
+    }
+
+    .section_2_text_place {
+        margin-right: 80px;
+    }
+
+    .section_3_skills {
+        gap: 60px;
+        width: 320px;
+        justify-content: center;
+    }
+
+    .section_4_projects {
+        margin: 70px 0;
+    }
+
+    .section_4_title, .section_4_description {
+        width: 320px;
+        text-align: center;
+    }
+
+    .project_card {
+        width: 320px;
+        height: 500px;
+    }
+
+    .project_card_img_baner{
+        width: 320px;
+    }
+
+    .project_card_title {
+        font-size: 24px;
+    }
+
+    .project_card_text {
+        font-size: 14px;
+        line-height: 20px;
+        width: 260px;
+    }
+
+    .project_card_stack {
+        font-size: 13px;
+        line-height: 18px;
+        width: 260px;
+    }
+
+    .project_card_stack_span {
+        font-size: 11px;
+    }
+
+    .project_card_links {
+        width: 260px;
+        margin: 0 auto;
+        gap: 20px;
+    }
+
+    .project_card_links_img {
+        margin-right: 5px;
+    }
+
+    .project_card_links_text {
+        font-size: 15px;
+        line-height: 10px;
+    }
+
+    .section_5_mail {
+        width: 320px;
+    }
+
+    .section_5_title {
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    .section_5_mail {
+        margin: 90px auto;
+    }
+
+    .footer_contacts{
+        display: flex;
+        flex-direction: column;
+        width: 110px;
+
+    }
+
+    .footer_contacts a {
+        font-size: 10px;
+        line-height: 20px;
+        font-weight: bold;
+    }
+
+    .footer_contacts_tel {
+        margin: 0 auto;
+    }
+
+    .footer_logo{
+        margin-right: 10px;
+    }
+
+    .footer_links {
+        gap: 5px;
+    }
+
+    footer::after {
+        width: 320px;
+        height: 3px;
+    }
+
+    .footer_text {
+        font-size: 12px;
+        margin: 0 auto;
+    }
+}
+    
