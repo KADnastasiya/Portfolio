@@ -1,14 +1,12 @@
 body{
  font-family: 'Poppins', sans-serif;
+ background: #f8f8f8; 
 }
 
 header{
     height: 59px;
     width: 100%;
     margin-top: 41px;
-    display: flex;
-    align-items: center;
-    
 }
 
 .container{
@@ -45,6 +43,63 @@ header nav ul li a{
     align-items: center;
 }
 
+input[type="checkbox"]{
+    -webkit-appearance: none;
+    visibility: hidden;
+    display: none;
+}
+
+.check{
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 20px;
+    border-radius: 16px;
+    background: #666;
+    cursor: pointer;
+    overflow: hidden;
+    transform: ease-in 0.5s;
+}
+
+input[type="checkbox"]:checked ~ .check{
+    background: #fff;
+    box-shadow: 0 0 0 6000px #222; 
+    z-index: -1;
+}
+
+.check:before{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    background: #fff;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+input[type="checkbox"]:checked ~ .check:before{
+    transform: translateX(-50px);
+}
+
+.check:after{
+    content: '';
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background: #666;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    transition: 0.5s;
+    transform: translateX(50px);
+}
+
+input[type="checkbox"]:checked ~ .check:after{
+    transform: translateX(0px);
+}
+
 main.container{
     margin-top: 220px;
 }
@@ -54,14 +109,13 @@ main.container{
     justify-content: space-between;
 }
 
-
 .section_1_left_block {
     margin-top: 35px;
     width: 635px;
 }
 
 .h1_subtitle{
-    color: var(--Solid-Heading, #42446E);
+    color:#42446E;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-size: 58px;
     font-style: normal;
@@ -71,7 +125,7 @@ main.container{
 }
 
 .h1_name, .section_5_mail_adress{
-    background: var(--Gradient-Heading, linear-gradient(90deg, #13B0F5 -2.06%, #E70FAA 100%));
+    background: linear-gradient(90deg, #13B0F5 -2.06%, #E70FAA 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -93,7 +147,7 @@ main.container{
 }
 
 .section_2_description, .section_3_description{
-    color: var(--dark-content, #666);
+    color: #666;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -110,7 +164,7 @@ main.container{
 }
 
 .section_2_subtitle{
-    color: var(--dark-content, #666);
+    color:#666;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -124,7 +178,7 @@ main.container{
 }
 
 .section_2_text{
-    color: var(--light-Content, #A7A7A7);
+    color: #A7A7A7;
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
@@ -146,7 +200,7 @@ main.container{
     content: '';
     width: 698px;
     height: 2px;
-    background: var(--colors-grey, #EBEAED);
+    background:#EBEAED;
     position: absolute;
     margin: 24px 0 30px;
 }
@@ -172,7 +226,7 @@ main.container{
 }
 
 .footer_contacts a{
-    color: var(--Solid-Heading, #42446E);
+    color: #42446E;
     font-family: DM Sans;
     font-size: 18px;
     font-style: normal;
@@ -197,7 +251,7 @@ section nav ul{
     padding: 0;
 }
 section nav ul li a{
-    color: var(--Solid-Heading, #42446E);
+    color: #42446E;
     font-family: DM Sans;
     font-size: 18px;
     font-style: normal;
@@ -221,7 +275,7 @@ section nav ul li a{
 }
 
 .section_4_title{
-    color: var(--Solid-Heading, #42446E);
+    color: #42446E;
 
     font-size: 42px;
     font-style: normal;
@@ -232,7 +286,7 @@ section nav ul li a{
 }
 
 .section_4_description{
-    color: var(--dark-content, #666);
+    color: #666;
     font-style: normal;
     font-weight: 400;
     line-height: 26px; 
@@ -254,7 +308,6 @@ section nav ul li a{
     box-shadow: 2px 2px 100px 0px rgba(0, 0, 0, 0.20);  
 }
 
-
 .project_card_title{
     color: #000;
     text-align: center;
@@ -269,7 +322,7 @@ section nav ul li a{
 }
 
 .project_card_text{
-    color: var(--dark-content, #666);
+    color: #666;
     font-size: 18px;
     font-style: normal;
     font-weight: 300;
@@ -283,7 +336,7 @@ section nav ul li a{
 }
 
 .project_card_stack{
-    color: var(--Solid-Heading, #42446E);
+    color: #42446E;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -329,7 +382,7 @@ section nav ul li a{
 }
 
 .section_5_title{
-    color: var(--colors-heading, #1E0E62);
+    color: #1E0E62;
     text-align: center;
     font-family: DM Sans;
     font-size: 58px;
@@ -340,7 +393,7 @@ section nav ul li a{
 }
 
 .footer_text{
-    color: var(--dark-content, #666);
+    color: #666;
     text-align: center;
     font-size: 18px;
     font-style: normal;
@@ -350,7 +403,7 @@ section nav ul li a{
 }
 
 .footer_text_color{
-    background: var(--Gradient-Heading, linear-gradient(90deg, #13B0F5 -2.06%, #E70FAA 100%));
+    background: linear-gradient(90deg, #13B0F5 -2.06%, #E70FAA 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -360,7 +413,7 @@ footer::after {
     content: '';
     width: 1193px;
     height: 5.682px;
-    background:var(--dark-content, #666);
+    background: #666;
     position: absolute;
     opacity: 0.3;
     margin: 42px 0;
@@ -401,8 +454,24 @@ footer::after {
     }
 
     .cards {
-        justify-content: space-around;
+        justify-content: space-between;
         gap: 25px;
+    }
+
+    .project_card {
+        width: 450px;
+    }
+
+    .project_card_img_baner{
+        width: 100%;
+    }
+
+    .project_card_title h4 {
+        margin: 10px 0 10px;
+    }
+
+    .project_card_stack p {
+        margin: 5px 0 5px;
     }
 
     .section_5_mail {
@@ -430,7 +499,7 @@ footer::after {
 
 @media (max-width: 992px){
     .container{
-        width: 780px;
+        width: 760px;
     }
 
     .header_nav{
@@ -438,12 +507,11 @@ footer::after {
     }
 
     header nav ul {
-        gap: 30px;
+        gap: 15px;
     }
 
-
     .header_links, .footer_links {
-        gap: 15px;
+        gap: 10px;
     }
 
     main.container {
@@ -468,7 +536,9 @@ footer::after {
     }   
 
     .section_3_skills {
-        gap: 21px;
+        gap: 60px;
+        width: 760px;
+        justify-content: space-around;
     }
 
     .section_4_projects {
@@ -476,11 +546,41 @@ footer::after {
     }
 
     .cards {
-        gap: 30px;
+        gap: 25px;
+    }
+
+    .project_card {
+        width: 330px;
+    }
+
+    .project_card_title {
+        font-size: 28px;
+    }
+
+    .project_card_title h4 {
+        margin: 30px 0 10px;
+    }
+
+    .project_card_text {
+        font-size: 16px;
+        width: 300px;
+    }
+
+    .project_card_stack {
+        font-size: 14px;
+        width: 300px;
+    }
+
+    .project_card_stack p {
+        margin: 12px 0 10px;
+    }
+
+    .project_card_stack_span {
+        font-size: 12px;
     }
 
     .section_5_mail {
-        width: 780px;
+        width: 760px;
     }
 
     .footer_contacts_tel {
@@ -488,7 +588,7 @@ footer::after {
     }
 
     footer::after {
-        width: 780px;
+        width: 760px;
     }
 
     section nav ul {
@@ -506,7 +606,7 @@ footer::after {
     }
 
     header nav ul {
-        gap: 15px;
+        gap: 10px;
     }
 
     header nav ul li a {
@@ -577,7 +677,45 @@ footer::after {
     .section_3_skills {
         gap: 50px;
         width: 650px;
-        justify-content: space-around;
+    }
+
+    .cards {
+        gap: 20px;
+    }
+
+     .project_card {
+        width: 300px;
+    }
+
+    .project_card_title {
+        font-size: 22px;
+    }
+
+    .project_card_text {
+        font-size: 14px;
+        width: 240px;
+    }
+
+    .project_card_stack {
+        font-size: 12px;
+        width: 240px;
+    }
+
+    .project_card_stack_span {
+        font-size: 11px;
+    }
+
+    .project_card_links {
+        display: block;
+        width: 240px;
+    }
+
+    .project_card_links_img {
+        width: 15px;
+    }
+
+    .project_card_links_text {
+        font-size: 14px;
     }
 
     .section_5_mail {
@@ -612,10 +750,9 @@ footer::after {
 
 }
 
-
-@media (max-width: 480px){
+@media (max-width: 576px){
     .container{
-        width: 320px;
+        width: 480px;
     }
 
     nav {
@@ -630,23 +767,8 @@ footer::after {
         margin-top: 60px;
     }
 
-
     .section_1_left_block {
-        width: 320px;
-    }
-
-    .h1_subtitle {
-        font-size: 32px;
-        line-height: 42px;
-    }
-
-    .main_photo img{
-        width: 320px;
-        height: 320px;
-    }
-
-    .section_2 {
-        margin-top: 70px;
+        width: 480px;
     }
 
     .section_2_title, .section_3_title {
@@ -656,70 +778,49 @@ footer::after {
     .section_2_description, .section_3_description {
         font-size: 14px;
         line-height: 20px;
-        width: 320px;
+        width: 480px;
         padding-top: 10px;
         text-align: center;
     }
 
-    .section_2_title{
-        padding-top: 35px;
-        margin: 5px 0 10px;
-    }
-
-    .section_2_places {
-        padding-top: 15px;
-    }
-
-    .section_2_subtitle {
-        font-size: 18px;
-        line-height: 24px;
-        margin-bottom: 3px;
-        text-align: center;
-    }
-
     .section_2_text_place1, .section_2_text_location {
-        margin-right: 15px;
+        margin-right: 39px;
     }
-
 
     .section_2_places::after {
-        width: 320px;
+        width: 480px;
     }
 
     .section_2_text_place2 {
-        margin-right: 30px;
+        margin-right: 62px;
     }
 
     .section_2_text_place3 {
-        margin-right: 77px;
+        margin-right: 145px;
     }
 
     .section_2_text_place {
-        margin-right: 80px;
+        margin-right: 165px;
     }
 
     .section_3_skills {
         gap: 60px;
-        width: 320px;
+        width: 480px;
         justify-content: center;
     }
 
-    .section_4_projects {
-        margin: 70px 0;
+    .section_4_title, .section_4_description {
+        width: 480px;
+        text-align: center;
     }
 
-    .section_4_title, .section_4_description {
-        width: 320px;
-        text-align: center;
+    .cards{
+        justify-content: center;
     }
 
     .project_card {
         width: 320px;
         height: 500px;
-    }
-
-    .project_card_img_baner{
-        width: 320px;
     }
 
     .project_card_title {
@@ -746,6 +847,7 @@ footer::after {
         width: 260px;
         margin: 0 auto;
         gap: 20px;
+        display: flex;
     }
 
     .project_card_links_img {
@@ -758,7 +860,7 @@ footer::after {
     }
 
     .section_5_mail {
-        width: 320px;
+        width: 480px;
     }
 
     .section_5_title {
@@ -796,7 +898,7 @@ footer::after {
     }
 
     footer::after {
-        width: 320px;
+        width: 480px;
         height: 3px;
     }
 
@@ -804,5 +906,93 @@ footer::after {
         font-size: 12px;
         margin: 0 auto;
     }
+}
+
+
+@media (max-width: 480px){
+    .container{
+        width: 320px;
+    }
+
+    .section_1_left_block {
+        width: 320px;
+    }
+
+    .h1_subtitle {
+        font-size: 32px;
+        line-height: 42px;
+    }
+
+    .main_photo img{
+        width: 320px;
+        height: 320px;
+    }
+
+    .section_2 {
+        margin-top: 70px;
+    }
+
+    .section_2_description, .section_3_description {
+        width: 320px;
+    }
+
+    .section_2_title{
+        padding-top: 35px;
+        margin: 5px 0 10px;
+    }
+
+    .section_2_places {
+        padding-top: 15px;
+    }
+
+    .section_2_subtitle {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 3px;
+        text-align: center;
+    }
+
+     .section_2_text_place1, .section_2_text_location {
+        margin-right: 15px;
+    }
+
+    .section_2_places::after {
+        width: 320px;
+    }
+
+    .section_2_text_place2 {
+        margin-right: 30px;
+    }
+
+    .section_2_text_place3 {
+        margin-right: 77px;
+    }
+
+    .section_2_text_place {
+        margin-right: 80px;
+    }
+
+    .section_3_skills {
+        gap: 60px;
+        width: 320px;
+        justify-content: center;
+    }
+
+    .section_4_projects {
+        margin: 70px 0;
+    }
+
+    .section_4_title, .section_4_description {
+        width: 320px;
+    }
+
+    .section_5_mail {
+        width: 320px;
+    } 
+
+    footer::after {
+        width: 320px;
+    }
+
 }
     
